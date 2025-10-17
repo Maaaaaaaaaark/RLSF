@@ -1,0 +1,25 @@
+
+🚀 Initializing IMPROVED RLSF Algorithm...
+Target Cost: 0.009999568287525884
+✅ IMPROVED RLSF Algorithm initialized successfully!
+start training with IMPROVED RLSF
+Bias Correction: True
+Uncertainty Modeling: True
+Improved Labeling: True
+[Eval] R: 19.93, C: 619.94, SR: 0.00, V: 0.00, maxV: 0.00
+D:\software_code\c09300\rlsf\.\Sources\algo\uncertainty_aware_cost_estimator.py:59: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\ReduceOps.cpp:1839.)
+  uncertainty = torch.std(individual_probs, dim=0)
+Traceback (most recent call last):
+  File "D:\software_code\c09300\rlsf\Trains\train_improved_prefim.py", line 408, in <module>
+    main()
+  File "D:\software_code\c09300\rlsf\Trains\train_improved_prefim.py", line 396, in main
+    train(env=env,test_env=test_env,algo=algo,eval_algo=eval_algo)
+  File "D:\software_code\c09300\rlsf\Trains\train_improved_prefim.py", line 281, in train
+    algo.update()
+  File "D:\software_code\c09300\rlsf\.\Sources\algo\prefim.py", line 303, in update
+    self.update_ppo(
+  File "D:\software_code\c09300\rlsf\.\Sources\algo\ppo.py", line 327, in update_ppo
+    cost_targets, cost_gaes = calculate_gae_cost(
+  File "D:\software_code\c09300\rlsf\.\Sources\algo\ppo.py", line 39, in calculate_gae_cost
+    gaes[-1] = deltas[-1]
+RuntimeError: expand(torch.cuda.FloatTensor{[20000]}, size=[]): the number of sizes provided (0) must be greater or equal to the number of dimensions in the tensor (1)

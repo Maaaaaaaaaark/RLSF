@@ -1,0 +1,172 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            odbo9kze7zqwsktartncnl7eh5dvxor3:
+                args:
+                    - --env_name
+                    - SafetyPointCircle1-v0
+                codePath: Trains\train_improved_prefim.py
+                codePathLocal: Trains\train_improved_prefim.py
+                cpu_count: 24
+                cpu_count_logical: 32
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "463858561024"
+                        used: "291412152320"
+                email: mkmj110@outlook.com
+                executable: D:\software_code\c09300\myenv\Scripts\python.exe
+                git:
+                    commit: ef3c9f3bbb42e57544642669ab7d339089f173cf
+                    remote: https://github.com/shshnkreddy/RLSF
+                gpu: NVIDIA GeForce RTX 4060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 4352
+                      memoryTotal: "17175674880"
+                      name: NVIDIA GeForce RTX 4060 Ti
+                      uuid: GPU-d9f057b2-2d32-159e-411a-9e51130de292
+                host: DESKTOP-6ULDHFR
+                memory:
+                    total: "68498296832"
+                os: Windows-10-10.0.26200-SP0
+                program: D:\software_code\c09300\rlsf\Trains\train_improved_prefim.py
+                python: CPython 3.9.12
+                root: D:\software_code\c09300\rlsf
+                startedAt: "2025-10-14T03:03:00.423530Z"
+                writerId: odbo9kze7zqwsktartncnl7eh5dvxor3
+        m: []
+        python_version: 3.9.12
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 13
+            "4": 3.9.12
+            "5": 0.22.2
+            "8":
+                - 3
+            "12": 0.22.2
+            "13": windows-amd64
+alpha:
+    value: 0.1
+aug_state:
+    value: "False"
+batch_size:
+    value: null
+begin_cpu:
+    value: null
+buffer_size:
+    value: 20000
+class_prob:
+    value: 0.5
+clip_dev:
+    value: 100
+clip_eps:
+    value: 0.2
+coef_ent:
+    value: 0.01
+conv:
+    value: "False"
+cost_gamma:
+    value: 0.99
+debug:
+    value: "False"
+device_name:
+    value: cuda
+enable_bias_correction:
+    value: true
+enable_improved_labeling:
+    value: true
+enable_uncertainty_modeling:
+    value: true
+encode_action:
+    value: "True"
+end_cpu:
+    value: null
+env_cost_limit:
+    value: 25
+env_name:
+    value: SafetyPointCircle1-v0
+epoch_clfs:
+    value: 80
+epoch_ppo:
+    value: 80
+eval_interval:
+    value: 60000
+eval_num_envs:
+    value: 50
+feedback_buffer_size:
+    value: 2000000
+gamma:
+    value: 0.99
+hidden_units_actor:
+    value: 256
+hidden_units_clfs:
+    value: 256
+hidden_units_critic:
+    value: 256
+hinge_coeff:
+    value: 0
+k:
+    value: 12
+lambd:
+    value: 0.97
+lr_actor:
+    value: 0.0001
+lr_clfs:
+    value: 0.0001
+lr_cost_critic:
+    value: 0.0001
+lr_critic:
+    value: 0.0001
+lr_penalty:
+    value: 0.0001
+max_episode_length:
+    value: 1000
+max_grad_norm:
+    value: 1
+mix:
+    value: 1
+mixup:
+    value: "False"
+n_ensemble:
+    value: 1
+num_envs:
+    value: 20
+num_eval_episodes:
+    value: 50
+num_training_step:
+    value: 10000000
+number_layers:
+    value: 2
+number_layers_clfs:
+    value: 2
+over_sample:
+    value: "False"
+pos_weight:
+    value: 1
+reward_factor:
+    value: 3
+risk_level:
+    value: 1
+seed:
+    value: 0
+segment_length:
+    value: 1000
+start_bad:
+    value: 0
+strat_schedule:
+    value: novel
+total_queries:
+    value: 1000
+wandb_log:
+    value: "True"
+warm_start_steps:
+    value: 0
+weight_path:
+    value: ./weights/
