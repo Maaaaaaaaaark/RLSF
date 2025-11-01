@@ -1,4 +1,4 @@
-<img width="9313" height="182" alt="image" src="https://github.com/user-attachments/assets/8a158506-669d-4a5a-aaf3-a50ed287b0de" /># Safety through Feedback in Constrained RL  
+# Safety through Feedback in Constrained RL  
 **Authors:** Liang Yuheng 
 
 ## Introduction  
