@@ -1,0 +1,14 @@
+{
+  "env_name": "SafetyPointCircle1-v0",
+  "num_training_step": 500,
+  "device_name": "cuda",
+  "num_envs": 2,
+  "eval_num_envs": 2,
+  "batch_size": 1024,
+  "seed": 0,
+  "wandb_log": true,
+  "wandb_api_key": "",
+  "enable_bias_correction": true,
+  "enable_uncertainty_modeling": true,
+  "enable_improved_labeling": true
+}

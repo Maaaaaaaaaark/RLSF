@@ -1,0 +1,28 @@
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_setup.py:_flush():81] Current SDK version is 0.22.2
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_setup.py:_flush():81] Configure stats pid to 35996
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_setup.py:_flush():81] Loading settings from C:\Users\32712\.config\wandb\settings
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_setup.py:_flush():81] Loading settings from D:\software_code\c09300\rlsf\wandb\settings
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_init.py:setup_run_log_directory():705] Logging user logs to D:\software_code\c09300\rlsf\wandb\run-20251014_110804-tggjddxx\logs\debug.log
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to D:\software_code\c09300\rlsf\wandb\run-20251014_110804-tggjddxx\logs\debug-internal.log
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_init.py:init():832] calling init triggers
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-10-14 11:08:04,975 INFO    MainThread:35996 [wandb_init.py:init():880] starting backend
+2025-10-14 11:08:07,215 INFO    MainThread:35996 [wandb_init.py:init():883] sending inform_init request
+2025-10-14 11:08:07,225 INFO    MainThread:35996 [wandb_init.py:init():891] backend started and connected
+2025-10-14 11:08:07,225 INFO    MainThread:35996 [wandb_init.py:init():961] updated telemetry
+2025-10-14 11:08:07,253 INFO    MainThread:35996 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-14 11:08:08,624 INFO    MainThread:35996 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-14 11:08:08,657 INFO    MainThread:35996 [wandb_run.py:_console_start():2509] atexit reg
+2025-10-14 11:08:08,657 INFO    MainThread:35996 [wandb_run.py:_redirect():2357] redirect: wrap_raw
+2025-10-14 11:08:08,657 INFO    MainThread:35996 [wandb_run.py:_redirect():2426] Wrapping output streams.
+2025-10-14 11:08:08,657 INFO    MainThread:35996 [wandb_run.py:_redirect():2449] Redirects installed.
+2025-10-14 11:08:08,659 INFO    MainThread:35996 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-14 11:08:08,659 INFO    MainThread:35996 [wandb_run.py:_config_callback():1392] config_cb None None {'env_name': 'SafetyPointCircle1-v0', 'gamma': 0.99, 'cost_gamma': 0.99, 'device_name': 'cuda', 'seed': 0, 'buffer_size': 20000, 'feedback_buffer_size': 2000000, 'mix': 1, 'hidden_units_actor': 256, 'hidden_units_critic': 256, 'hidden_units_clfs': 256, 'number_layers': 2, 'number_layers_clfs': 2, 'conv': 'False', 'lr_actor': 0.0001, 'lr_critic': 0.0001, 'lr_cost_critic': 0.0001, 'lr_penalty': 0.0001, 'lr_clfs': 0.0001, 'epoch_ppo': 80, 'epoch_clfs': 80, 'clip_eps': 0.2, 'lambd': 0.97, 'coef_ent': 0.01, 'max_grad_norm': 1.0, 'num_training_step': 500, 'eval_interval': 60000, 'num_eval_episodes': 50, 'max_episode_length': 1000, 'segment_length': 1000, 'mixup': 'False', 'class_prob': 0.5, 'n_ensemble': 1, 'reward_factor': 3.0, 'weight_path': './weights/', 'pos_weight': 1.0, 'strat_schedule': 'novel', 'k': 12, 'total_queries': 1000, 'begin_cpu': None, 'end_cpu': None, 'env_cost_limit': 25.0, 'alpha': 0.1, 'clip_dev': 100.0, 'batch_size': 1024, 'num_envs': 2, 'eval_num_envs': 2, 'risk_level': 1.0, 'start_bad': 0, 'warm_start_steps': 0, 'wandb_log': 'True', 'aug_state': 'False', 'debug': 'False', 'encode_action': 'True', 'over_sample': 'False', 'hinge_coeff': 0.0}
+2025-10-14 11:08:08,660 INFO    MainThread:35996 [wandb_run.py:_config_callback():1392] config_cb None None {'enable_bias_correction': True, 'enable_uncertainty_modeling': True, 'enable_improved_labeling': True}
+2025-10-14 11:09:22,904 INFO    MainThread:35996 [wandb_run.py:_finish():2275] finishing run mkmj110-111/RLSF_Improved/tggjddxx
+2025-10-14 11:09:22,905 INFO    MainThread:35996 [wandb_run.py:_atexit_cleanup():2474] got exitcode: 0
+2025-10-14 11:09:22,905 INFO    MainThread:35996 [wandb_run.py:_restore():2456] restore
+2025-10-14 11:09:22,906 INFO    MainThread:35996 [wandb_run.py:_restore():2462] restore done
+2025-10-14 11:09:25,301 INFO    MainThread:35996 [wandb_run.py:_footer_sync_info():3872] logging synced files

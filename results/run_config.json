@@ -1,0 +1,26 @@
+{
+  "mode": "single",
+  "output_dir": "./results",
+  "env_name": "SafetyPointCircle1-v0",
+  "seed": 0,
+  "num_training_step": 100000,
+  "max_episode_length": 500,
+  "segment_length": 500,
+  "n_ensemble": 3,
+  "enable_bias_correction": "True",
+  "enable_uncertainty_modeling": "True",
+  "enable_improved_labeling": "True",
+  "experiment_name": "improved_rlsf",
+  "wandb_log": "True",
+  "environments": [
+    "SafetyPointCircle1-v0",
+    "SafetyCarCircle1-v0"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "baseline_dir": "./baseline_results",
+  "improved_dir": "./improved_results"
+}

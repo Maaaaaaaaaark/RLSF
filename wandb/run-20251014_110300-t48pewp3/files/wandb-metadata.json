@@ -1,0 +1,44 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "CPython 3.9.12",
+  "startedAt": "2025-10-14T03:03:00.423530Z",
+  "args": [
+    "--env_name",
+    "SafetyPointCircle1-v0"
+  ],
+  "program": "D:\\software_code\\c09300\\rlsf\\Trains\\train_improved_prefim.py",
+  "codePath": "Trains\\train_improved_prefim.py",
+  "codePathLocal": "Trains\\train_improved_prefim.py",
+  "git": {
+    "remote": "https://github.com/shshnkreddy/RLSF",
+    "commit": "ef3c9f3bbb42e57544642669ab7d339089f173cf"
+  },
+  "email": "mkmj110@outlook.com",
+  "root": "D:\\software_code\\c09300\\rlsf",
+  "host": "DESKTOP-6ULDHFR",
+  "executable": "D:\\software_code\\c09300\\myenv\\Scripts\\python.exe",
+  "cpu_count": 24,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA GeForce RTX 4060 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "463858561024",
+      "used": "291412152320"
+    }
+  },
+  "memory": {
+    "total": "68498296832"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4060 Ti",
+      "memoryTotal": "17175674880",
+      "cudaCores": 4352,
+      "architecture": "Ada",
+      "uuid": "GPU-d9f057b2-2d32-159e-411a-9e51130de292"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "odbo9kze7zqwsktartncnl7eh5dvxor3"
+}
