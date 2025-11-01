@@ -1,64 +1,31 @@
-# Safety through Feedback in Constrained RL  
-**Authors:** Shashank Reddy Chirra, Pradeep Varakantham, Praveen Paruchuri  
+<img width="9313" height="182" alt="image" src="https://github.com/user-attachments/assets/8a158506-669d-4a5a-aaf3-a50ed287b0de" /># Safety through Feedback in Constrained RL  
+**Authors:** Liang Yuheng 
 
 ## Introduction  
-In safety-critical RL, designing cost functions for safe behavior can be complex and costly, for example, in domains like self-driving. We propose a scalable method to infer cost functions from feedback, addressing challenges in long term credit assignment by transforming the task into a supervised classification problem with noisy labels. To minimize feedback collection costs, we introduce a novelty-based sampling mechanism that elicits feedback only novel trajectories. Experiments on Safety Gymnasium and self-driving scenarios demonstrate that our method achieves near-optimal performance, highlighting its effectiveness and scalability.  
+In real world tasks, designing a cost function 𝑐(𝑠,𝑎) that accurately and comprehensively covers all dangerous behaviors is hard: state spaces are high-dimensional, risky events are sparse, and contexts shift; per-state labeling is expensive and subjective. As a pragmatic starting point, RLSF replaces per-state labels with trajectory-segment “safe/unsafe” weak feedback and learns a data-driven cost model 𝑐 ̂(𝑠,𝑎), cutting labeling cost while retaining the constraint signal needed to train safe policies and remaining scalable.
+Although RLSF is effective, three pain points remain: (1) segment-level feedback spreads a single “unsafe” label across an entire segment, causing systematic cost overestimation and overly conservative policies; (2) mitigating this relies on a fixed slack 𝛿, but the best value drifts across training stages and environments, so manual tuning is slow and brittle; (3) the cost classifier 𝐶 ̂(𝑠,𝑎) outputs only 0/1 and cannot distinguish known risk from unknown uncertainty, which suppresses efficient exploration.
+Our objective is to address the issues through the design of two core modules: an uncertainty perception cost estimator and an adaptive bias corrector.
+ 
 
-## Installation  
-1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/).  
+## Installation   
 
-2. Clone this repository:  
+1. Clone this repository:  
     ```bash  
-    git clone https://github.com/shshnkreddy/RLSF.git  
+    git clone https://github.com/Maaaaaaaaaark/RLSF  
     cd RLSF  
     ```  
 
-3. Create and activate a conda environment:  
-    ```bash  
-    conda create -n RLSF python=3.10  
-    conda activate RLSF  
-    ```  
-
-4. Install dependencies:  
+2. Install dependencies:  
     ```bash  
     git clone https://github.com/PKU-Alignment/safety-gymnasium.git  
     cd safety-gymnasium  
     pip install -e .  
     cd ..  
-    pip install -r requirements.txt  
-    ```  
-
+    pip install -r requirements.txt
+    pip install streamlit pyngrok -q 
+    ```
 ## Train RLSF  
 To train RLSF, use the following command:  
 ```bash  
-./Scripts/run_train_pref.sh  
-```  
-
-## Environments and Hyperparameters  
-The following environment specifications are supported:  
-
-1. **Safety Gymnasium**: As defined in the [Safety Gymnasium documentation](https://www.safety-gymnasium.com/en/latest/).  
-
-2. **ICRL Benchmark** (G. Liu et al., 2023): Use `'BiasedPendulum'` and `'BlockedSwimmer'` for the Biased Pendulum and Blocked Swimmer environments, respectively.  
-
-3. **Driver Environments** (D. Sadigh et al., 2017; D. Lindner et al., 2022): Use `'SafeDriverTwoLanes'`, `'SafeDriverBlocked'`, and `'SafeDriverLaneChange'` for the respective driver scenarios.  
-
-The remaining hyperparameters are specified in the `'Parameters'` directory.  
-
-## Credit  
-This repository builds upon a fork of [SIM-RL](https://github.com/hmhuy0/SIM-RL.git).  
-
-## Contact  
-Email: shashankc@smu.edu.sg  
-
-## Citation  
-```  
-@inproceedings{  
-    chirra2024safety,  
-    title={Safety through feedback in Constrained {RL}},  
-    author={Shashank Reddy Chirra and Pradeep Varakantham and Praveen Paruchuri},  
-    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},  
-    year={2024},  
-    url={https://openreview.net/forum?id=WSsht66fbC}  
-}  
-```  
+streamlit run gui_app.py  
+```
