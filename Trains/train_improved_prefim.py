@@ -102,8 +102,8 @@ def main():
     name = f'IMPROVED-RLSF-{n_ensemble}-{env_name}-{strat_schedule}'
     if(wandb_log):
         # 自动注入WANDB_API_KEY，避免控制台交互
-        if not os.environ.get('WANDB_API_KEY'):
-            os.environ['WANDB_API_KEY'] = '8d26d585e9285a6852ce1b81c620ddb13ef77d3a'
+        # if not os.environ.get('WANDB_API_KEY'):
+        #     os.environ['WANDB_API_KEY'] = '016182a657ce2a6e2431b4d2caf162819769d7bb'
         wandb.init(name=name, group=f'{env_name}', project='RLSF_Improved')
 
     global weight_path
