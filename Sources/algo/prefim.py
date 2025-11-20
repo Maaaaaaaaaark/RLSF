@@ -455,36 +455,36 @@ class PREFIM(PPO_lag):
                 bad_states, bad_actions, _, _ = self.sample_state_actions(n_bad_sample)
                 _, _, good_states, good_actions = self.sample_state_actions(n_good_sample)             
             
-            preds = []
-            for i in range(self.n_ensemble):
-                bad_logits = self.clfs[i](bad_states, bad_actions)
-                good_logits = self.clfs[i](good_states, good_actions)
-                disc_logits = torch.cat((good_logits, bad_logits), dim=0)
-                #classify disc_logits
-                pred_ = torch.zeros_like(disc_logits, dtype=torch.bool, device=self.device)
-                pred_[disc_logits<0.0] = True
-                preds.append(pred_)
+                preds = []
+                for i in range(self.n_ensemble):
+                    bad_logits = self.clfs[i](bad_states, bad_actions)
+                    good_logits = self.clfs[i](good_states, good_actions)
+                    disc_logits = torch.cat((good_logits, bad_logits), dim=0)
+                    #classify disc_logits
+                    pred_ = torch.zeros_like(disc_logits, dtype=torch.bool, device=self.device)
+                    pred_[disc_logits<0.0] = True
+                    preds.append(pred_)
 
-            preds = torch.stack(preds, dim=0)
-            preds = torch.sum(preds, dim=0)
+                preds = torch.stack(preds, dim=0)
+                preds = torch.sum(preds, dim=0)
                     
                 #majority voting
-            preds_good = torch.zeros_like(preds, dtype=torch.bool, device=self.device)
-            is_good = preds > self.n_ensemble//2
-            preds_good[is_good] = True
+                preds_good = torch.zeros_like(preds, dtype=torch.bool, device=self.device)
+                is_good = preds > self.n_ensemble//2
+                preds_good[is_good] = True
                 
-            labels = torch.cat((torch.zeros((n_good_sample,1), device=self.device, dtype=torch.bool), torch.ones((n_bad_sample,1), device=self.device, dtype=torch.bool)), dim=0)
+                labels = torch.cat((torch.zeros((n_good_sample,1), device=self.device, dtype=torch.bool), torch.ones((n_bad_sample,1), device=self.device, dtype=torch.bool)), dim=0)
 
-            train_stats = compute_train_stats(
-                preds_good, labels
-            )
+                train_stats = compute_train_stats(
+                    preds_good, labels
+                )
 
-            if(self.wandb_log):
+                if(self.wandb_log):
+                    for k, v in train_stats.items():
+                        wandb.log({f'disc/{dist_type}/'+k: v})
+
                 for k, v in train_stats.items():
-                    wandb.log({f'disc/{dist_type}/'+k: v})
-
-            for k, v in train_stats.items():
-                print(f'disc/{dist_type}/'+k, v)
+                    print(f'disc/{dist_type}/'+k, v)
 
             
     def calculate_gradient_norm(self, model):
